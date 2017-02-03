@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<div class="color">
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -17,11 +18,13 @@
   }
   </style>
 </head>
+
   <body>
 
     <div class="container">
       <br>
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -33,37 +36,60 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
 
+
           <div class="item active">
             <img src="http://i.imgur.com/pznXiDF.jpg" alt="Chania" width="f" height="345">
             <div class="carousel-caption">
+              <div class="title_for_home">
+                <h1> Trek Plan </h1>
+              </div>
               <a href="<%=searches_path%>" class="btn btn-hero btn-lg" role="button">Enter</a>
-                <a href="<%=searches_path%>" class="btn btn-hero btn-lg" role="button"><h4>"It turns out the road less traveled, isnt actually a road at all"</h4></a>
+                <div class="quote">
+                  <h4>"It turns out the road less traveled, isnt actually a road at all"</h4>
             </div>
           </div>
+        </div>
+
+        <div class="item">
+          <img src="http://i.imgur.com/7Owo2gT.jpg" alt="Flower" width="460" height="345">
+          <div class="carousel-caption">
+            <div class="title_for_home">
+              <h1> Trek Plan </h1>
+            </div>
+            <a href="<%=searches_path%>" class="btn btn-hero btn-lg" role="button">Enter</a>
+              <div class="quote">
+                <h4>"It turns out the road less traveled, isnt actually a road at all"</h4>
+          </div>
+        </div>
+      </div>
 
           <div class="item">
             <img src="http://i.imgur.com/zPDZiAM.jpg" alt="Chania" width="460" height="345">
             <div class="carousel-caption">
+              <div class="title_for_home">
+                <h1> Trek Plan </h1>
+              </div>
               <a href="<%=searches_path%>" class="btn btn-hero btn-lg" role="button">Enter</a>
-              <a href="<%=searches_path%>" class="btn btn-hero btn-lg" role="button"><h4>"It turns out the road less traveled, isnt actually a road at all"</h4></a>
+                <div class="quote">
+                  <h4>"It turns out the road less traveled, isnt actually a road at all"</h4>
             </div>
           </div>
+        </div>
 
           <div class="item">
             <img src="http://i.imgur.com/XQuGCeL.jpg" alt="Flower" width="460" height="345">
             <div class="carousel-caption">
+              <div class="title_for_home">
+                <h1> Trek Plan </h1>
+              </div>
               <a href="<%=searches_path%>" class="btn btn-hero btn-lg" role="button">Enter</a>
-              <a href="<%=searches_path%>" class="btn btn-hero btn-lg" role="button"><h4>"It turns out the road less traveled, isnt actually a road at all"</h4></a>
+                <div class="quote">
+                  <h4>"It turns out the road less traveled, isnt actually a road at all"</h4>
             </div>
           </div>
+        </div>
 
-          <div class="item">
-            <img src="http://i.imgur.com/7Owo2gT.jpg" alt="Flower" width="460" height="345">
-            <div class="carousel-caption">
-              <a href="<%=searches_path%>" class="btn btn-hero btn-lg" role="button">Enter</a>
-              <a href="<%=searches_path%>" class="btn btn-hero btn-lg" role="button"><h4>"It turns out the road less traveled, isnt actually a road at all"</h4></a>
-            </div>
-          </div>
+
 
         </div>
 
@@ -80,4 +106,5 @@
     </div>
 
   </body>
+</div>
 </html>

@@ -13,4 +13,8 @@ Rails.application.routes.draw do
 
   resources :activities do
   end
+
+  resources :abouts, only: [:index] do
+  end
+
 end

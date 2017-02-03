@@ -161,6 +161,7 @@ html, body {
 /********************************/
 
 
+
 .btn.btn-lg {padding: 10px 40px;}
 .btn.btn-hero,
 .btn.btn-hero:hover,
@@ -170,4 +171,39 @@ html, body {
     border-color: #bcb91a;
     outline: none;
     margin: 20px auto;
+}
+
+.color {
+  background-color: black;
+
+}
+
+.title_for_home {
+  padding-bottom: 500px;
+  color: white;
+}
+
+.container {
+  background-color: black;
+}
+
+.login {
+  text-align: center;
+}
+
+.field {
+  padding: 10px;
+}
+
+.actions {
+  padding: 10px;
+}
+
+.me {
+  text-align: center;
+}
+
+
+.author {
+  padding-top: 100px;
 }
