@@ -1,0 +1,46 @@
+<div class="callout" id="review-page">
+  <div class="col-xs-3 col-centered">
+    <%= image_tag(@activity.image, height: "200px", width: "300px")%>
+  </div>
+  <div class="col-xs-3 col-centered">
+    <strong><%= @activity.name %></strong><br>
+    <i>Created by: <%= @activity.creator.username %></i><br>
+    <%= @activity.description %><br><br>
+  </div>
+  <div>
+    <div><%= button_to "Edit this Activity", edit_activity_path(@activity), method: :get, class: "hollow button" %></div><br>
+    <div><%= button_to "Delete this Activity", activity_path(@activity), method: :delete, class: "hollow button" %></div><br>
+  </div>
+  <div>
+    <div class="col-xs-3 col-centered"><%= button_to "Review this Activity", new_activity_review_path(@activity), method: :get, class: "hollow button" %></div>
+  </div>
+</div>
+
+<div class="reviews-title">
+  Reviews:
+</div>
+<ul style="list-style: none;">
+  <% @reviews.each do |review| %>
+    <div class="callout" id="individual-review">
+      <div>
+        <i><%= review.body %> <br> <%= review.rating %>/5 Stars (<%= review.reviewer.username %>)</i><br>
+        Votes Total: <%= review.sum_votes %>
+      </div>
+
+      <div id='voting-number' class="total-votes-<%= review.id %>">
+        <div class="col-xs-3 col-centered">
+          <div><%= button_to "Edit this Review", edit_activity_review_path(@activity, review), method: :get, class: "hollow button" %></div>
+        </div>
+        <div class="col-xs-3 col-centered">
+          <div><%= button_to "Like", review_votes_path(review, value: 1), id: 'upvote', data: { activityid: "#{@activity.id}", reviewid: "#{review.id}" }, class: "hollow button" %></div>
+        </div>
+        <div class="col-xs-3 col-centered">
+          <div><%= button_to "Dislike", review_votes_path(review, value: -1), id: 'downvote', data: { activityid: "#{@activity.id}", reviewid: "#{review.id}" }, class: "hollow button" %></div>
+        </div>
+        <div class="col-xs-3 col-centered">
+          <div><%= button_to "Delete this Review", activity_review_path(@activity, review), method: :delete, class: "hollow button" %></div>
+        </div>
+      </div>
+    </div><br>
+  <% end %>
+</ul>

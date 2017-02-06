@@ -6,8 +6,6 @@ class UsersController < ApplicationController
   end
 end
 
-
-class UsersController < ApplicationController
   def new
     @user = User.new(oauth_uid: session[:auth]["uid"])
   end
@@ -27,4 +25,3 @@ class UsersController < ApplicationController
       redirect_to :back
     end
   end
-end

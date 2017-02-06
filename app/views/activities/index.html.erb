@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <%= link_to "Add a New Acitivity", new_activity_path, class: "hollow button" %>
+    <br><br>
+  </div>
+  <% if @activity.nil? %>
+    <div id="app"></div>
+  <% else %>
+    <div>
+      <% @activities.each do |activity| %>
+        <h5><%= link_to activity.name, activity_path(activity) %></h5>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<br>

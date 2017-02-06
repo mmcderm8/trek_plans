@@ -1,0 +1,9 @@
+<div>
+  <%= form_tag(activities_path, method: "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Activities", class: "search" %>
+      <div class = "search-bar">
+      <%= submit_tag "Search" %>
+      <% end %>
+    </div>
+  </div>
+</div>
