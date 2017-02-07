@@ -23,8 +23,14 @@ var inactive = false;
 
 $(document).ready(function() {
   // initialize the map on load
+  $("#city-search-submit").on('click', function(e) {
+    e.preventDefault();
+  });
+
   initialize();
 });
+
+
 
 /**
  * Initializes the map and some events on page load
@@ -85,12 +91,14 @@ var bind_controls = function(map) {
  */
 var search = function(map) {
   var searchTerm = $('#map_search input[type=text]').val();
+  var currentCity = $("#city-search-text").val()
 
   if (inactive === true) { return };
 
   // post to the search with the search term, take the response data
   // and process it
-  $.post('/search', { term: searchTerm }, function(data) {
+
+  $.post('/search', { term: searchTerm, city: currentCity }, function(data) {
     inactive = true;
 
     // do some clean up

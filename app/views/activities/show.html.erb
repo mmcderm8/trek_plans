@@ -1,10 +1,9 @@
 <div class="callout" id="review-page">
   <div class="col-xs-3 col-centered">
-    <%= image_tag(@activity.image, height: "200px", width: "300px")%>
   </div>
   <div class="col-xs-3 col-centered">
     <strong><%= @activity.name %></strong><br>
-    <i>Created by: <%= @activity.creator.username %></i><br>
+    <i>Created by: <%= @activity.creator.name %></i><br>
     <%= @activity.description %><br><br>
   </div>
   <div>
