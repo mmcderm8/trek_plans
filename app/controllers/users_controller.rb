@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
   end
-end
+
 
   def new
     @user = User.new(oauth_uid: session[:auth]["uid"])
@@ -24,4 +24,4 @@ end
   #     flash[:notice] = "Couldn't sign in"
   #     redirect_to :back
   #   end
-  end
+end
