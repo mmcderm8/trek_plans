@@ -1,0 +1,12 @@
+<% if current_user && current_user.admin? %>
+  <div>
+    <% @users.each do |user| %>
+      <p>
+        <%= user.username %>
+        <%= button_to "Delete #{user.username}'s Account", admin_user_path(user), method: :delete, class: "hollow button" %>
+      </p>
+      <br>
+    <% end %>
+    <%= button_to "Back to Admin Activities Page", admin_activities_path, method: :get, class: "hollow button" %>
+  </div>
+<% end %>

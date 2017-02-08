@@ -6,9 +6,7 @@ class UsersController < ApplicationController
   end
 
 
-  def new
-    @user = User.new(oauth_uid: session[:auth]["uid"])
-  end
+
 
   # def create
   #   @info = session[:auth]["info"]

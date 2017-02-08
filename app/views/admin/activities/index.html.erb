@@ -1,0 +1,12 @@
+<% if current_user && current_user.admin? %>
+  <div>
+    <% @activities.each do |activity| %>
+      <h5>
+        <%= link_to activity.name, admin_activity_path(activity) %>
+        <%= button_to 'Delete this Activity', admin_activity_path(activity), method: :delete, class: "hollow button" %>
+      </h5><br>
+      <br>
+    <% end %>
+    <%= button_to "Users", admin_users_path, method: :get, class: "hollow button" %>
+  </div>
+<% end %>

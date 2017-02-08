@@ -1,14 +1,14 @@
 // ESLint esversion: 6
 
 import React, { Component } from 'react';
-import Activity from './Activity';
+import Dish from './Dish';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activities: [],
-      selectedActivityId: null
+      dishes: [],
+      selectedDishId: null
     };
     this.fetchData = this.fetchData.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   fetchData(){
-    fetch('/api/v1/activities')
+    fetch('/api/v1/dishes')
     .then(response => {
       if(response.ok) {
         return response.json();
@@ -31,39 +31,39 @@ class App extends Component {
       }
     })
     .then(data => {
-      this.setState({ activities: data });
+      this.setState({ dishes: data });
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   handleClick(id) {
-    if (id === this.state.selectedActivityId) {
-      this.setState({ selectedActivityId: null });
+    if (id === this.state.selectedDishId) {
+      this.setState({ selectedDishId: null });
     } else {
-      this.setState({ selectedActivityId: id });
+      this.setState({ selectedDishId: id });
     }
   }
 
   render() {
-    let activities = this.state.activities.map(activity => {
+    let dishes = this.state.dishes.map(dish => {
       return(
-        <Activity
-        key = {activity.id}
-        id = {activity.id}
-        creator = {activity.creator}
-        name = {activity.name}
-        description = {activity.description}
-        reviews = {activity.reviews}
-        image = {activity.image.url}
+        <Dish
+        key = {dish.id}
+        id = {dish.id}
+        creator = {dish.creator}
+        name = {dish.name}
+        description = {dish.description}
+        reviews = {dish.reviews}
+        image = {dish.image.url}
         onClick = {this.handleClick}
-        clickedState = {this.state.selectedActivityId}
+        clickedState = {this.state.selectedDishId}
         />
       );
     });
 
     return(
       <div>
-        {activities}
+        {dishes}
       </div>
     );
   }

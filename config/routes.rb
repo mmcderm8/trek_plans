@@ -23,4 +23,11 @@ Rails.application.routes.draw do
   resources :abouts, only: [:index] do
   end
 
+  namespace :admin do
+  resources :activities, only: [:index, :show, :destroy] do
+    resources :reviews, only: [:destroy]
+    end
+  resources :users, only: [:index, :destroy]
+  end
+
 end

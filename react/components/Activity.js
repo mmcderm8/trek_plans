@@ -4,8 +4,8 @@
 import React from 'react';
 import { Callout } from 'react-foundation';
 
- const Dish = props => {
-  let url = `/dishes/${props.id}`;
+ const Activity = props => {
+  let url = `/activites/${props.id}`;
   let onClick = () => {
     props.onClick(props.id);
   };
@@ -26,10 +26,10 @@ import { Callout } from 'react-foundation';
     <div>
       <Callout className="callout">
         <div className="small-6 columns">
-          <img src={props.image} alt="dish photo" className="dish-img"/>
+          <img src={props.image} alt="activity photo" className="activity-img"/>
         </div>
         <div className="small-6 columns">
-        <a href={url} className="dish-name">{props.name}</a><br/>
+        <a href={url} className="activity-name">{props.name}</a><br/>
         <i>Created by: {props.creator.username}</i>
           <p onClick = {onClick}>Show More</p>
             {showDetails}
@@ -39,4 +39,4 @@ import { Callout } from 'react-foundation';
   );
 };
 
-export default Dish;
+export default Activity;
