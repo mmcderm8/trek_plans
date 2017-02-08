@@ -6,11 +6,9 @@
     <% if controller_name == 'yelps' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyDO8BpkVP0w3CJbUtgLoDv74WIezpCmUWE&sensor=true" %>
     <%= javascript_include_tag 'application'%>
-    <%= favicon_link_tag 'http://www.listchallenges.com/f/items/2c6fce4f-e410-4d50-80b6-870bc945b17b.jpg' %>
     <%= csrf_meta_tags %>
      <% else %>
     <%= javascript_include_tag 'application'%>
-    <%= favicon_link_tag 'http://www.listchallenges.com/f/items/2c6fce4f-e410-4d50-80b6-870bc945b17b.jpg' %>
     <%= csrf_meta_tags %>
     <% end %>
   </head>
