@@ -13,4 +13,3 @@
 /node_modules
 /app/assets/javascripts/bundle.js
 /react/coverage
-/app/views/layouts/application.html.erb

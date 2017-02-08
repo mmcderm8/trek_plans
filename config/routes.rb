@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   resources :searches, only: [:index]
     post '/search' => 'searches#search'
 
+  resources :yelps, only: [:index]
+    post '/search' => 'searches#search'
+
   resources :activities do
     resources :reviews, except: [:index]
   end

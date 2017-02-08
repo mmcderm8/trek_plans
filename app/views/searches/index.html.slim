@@ -1,16 +1,4 @@
 
-#map_canvas
-
-#control_container
-
-  #map_search
-    form
-      input type='text'
-      a#map_search_submit href='#': span.glyphicon.glyphicon-search
-
-  .attribution
-    p powered by Yelp
-    p.burst= image_tag 'burst_tiny.png'
-
-
-  #results
+input#pac-input.controls[type="text" placeholder="Type a city to begin your trek!"]
+#map
+script[src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO8BpkVP0w3CJbUtgLoDv74WIezpCmUWE&libraries=places&callback=initAutocomplete" async defer]
