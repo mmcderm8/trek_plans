@@ -24,11 +24,13 @@ gem 'slim-rails'
 gem 'geocoder'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'bootswatch-rails'
+gem 'sendgrid'
 
 group :development do
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen'
+  gem 'devise'
 end
 
 group :development, :test do
@@ -39,6 +41,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers', require: false
   gem 'valid_attribute'
+  gem 'devise'
   gem 'dotenv-rails'
 end
 
