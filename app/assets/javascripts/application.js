@@ -34,9 +34,9 @@ function initAutocomplete() {
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
 
   // Bias the SearchBox results towards current map's viewport.
-  // map.addListener('bounds_changed', function() {
-  //   searchBox.setBounds(map.getBounds());
-  // });
+  map.addListener('bounds_changed', function() {
+    searchBox.setBounds(map.getBounds());
+  });
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
   searchBox.addListener('places_changed', function() {

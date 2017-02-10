@@ -60,6 +60,7 @@ var bind_controls = function(map) {
   });
   var transitLayer = new google.maps.TransitLayer();
   transitLayer.setMap(map);
+  
   // push the search controls onto the map
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(controlContainer);
 }
