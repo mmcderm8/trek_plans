@@ -1,11 +1,10 @@
 
-
 // ESLint esversion: 6
 import React from 'react';
-import { Callout } from 'react-foundation';
+
 
  const Activity = props => {
-  let url = `/activites/${props.id}`;
+  let url = `/activitieses/${props.id}`;
   let onClick = () => {
     props.onClick(props.id);
   };

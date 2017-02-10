@@ -1,11 +1,13 @@
-<h2>Sign up</h2>
+<div class="h2">
+  <h2>Sign up</h2>
+</div>
 
 <div class="small-6 small-centered columns">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { :multipart => true }) do |f| %>
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :username, 'Username' %>
+      <%= f.label :username, 'Username' %><br />
       <%= f.text_field :username %>
     </div>
 
@@ -27,10 +29,11 @@
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
-    <div class="button hollow">
+    <div class="button">
       <%= f.submit "Sign up" %>
     </div>
   <% end %>
-
+  <div class="yo">
   <%= render "devise/shared/links" %>
+</div>
 </div>

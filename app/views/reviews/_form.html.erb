@@ -1,15 +1,16 @@
-<div class="small-6 small-centered columns">
+<div class="name">
   <%= form_for [@activity, @review] do |f| %>
     <div>
-      <%= f.label :rating %>
+      <%= f.label :rating %> <br>
       <%= f.text_field :rating %>
     </div>
     <div>
-      <%= f.label :body, "Comments" %>
+      <%= f.label :body, "Comments" %> <br>
       <%= f.text_field :body %>
     </div>
+    <br>
     <div>
-      <%= f.submit "Review #{@activity.name}", class: "hollow button" %>
+      <%= f.submit "Review #{@activity.name}", class: "hollow button" %> <br>
     </div>
   <% end %>
 </div>

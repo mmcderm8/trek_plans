@@ -5,7 +5,7 @@ var config = {
     path: './react/src/main.js',
   },
   output: {
-    path: './app/assets/javascripts',
+    path: './app/assets/javascripts/Activity',
     filename: 'bundle.js'
   },
   module: {

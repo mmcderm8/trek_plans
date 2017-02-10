@@ -414,7 +414,6 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
-    valid_attribute (2.0.0)
     warden (1.2.7)
       rack (>= 1.0)
     websocket (1.2.4)
@@ -468,7 +467,6 @@ DEPENDENCIES
   spring-watcher-listen
   tzinfo-data
   uglifier
-  valid_attribute
   yelp
 
 RUBY VERSION
