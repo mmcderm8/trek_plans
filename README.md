@@ -6,3 +6,8 @@ Trek Plan is a Ruby on Rails based application that helps people plan trips. I s
 
 
 * Ruby version: 2.2.5
+
+* Incorporated 2 API's: Google Maps API and Yelp API.
+* Used javascript when incorporated the API's.
+* Used devise authentication service so that you know only your friends are commenting on your trips.
+* Used TDD for my approach.
