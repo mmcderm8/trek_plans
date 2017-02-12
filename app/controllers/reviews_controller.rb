@@ -12,7 +12,6 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.reviewer_id = @reviewer.id
     if @review.save
-      UserMailer.new_review(@review).deliver_now
       flash[:notice] = "Review added successfully"
       redirect_to activity_path(@activity)
     else
