@@ -6,7 +6,7 @@
   <% if @activity.nil? %>
     <div id="app"></div>
   <% else %>
-    <div>
+    <div class="new">
       <% @activities.each do |activity| %>
         <h5><%= link_to activity.name, activity_path(activity) %></h5>
       <% end %>
