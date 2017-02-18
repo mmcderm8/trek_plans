@@ -3,10 +3,10 @@
     <% @users.each do |user| %>
       <p>
         <%= user.username %>
-        <%= button_to "Delete #{user.username}'s Account", admin_user_path(user), method: :delete, class: "hollow button" %>
+        <%= button_to "Delete #{user.username}'s Account", admin_user_path(user), method: :delete, class: "button" %>
       </p>
       <br>
     <% end %>
-    <%= button_to "Back to Admin Activities Page", admin_activities_path, method: :get, class: "hollow button" %>
+    <%= button_to "Back to Admin Activities Page", admin_activities_path, method: :get, class: "button" %>
   </div>
 <% end %>
